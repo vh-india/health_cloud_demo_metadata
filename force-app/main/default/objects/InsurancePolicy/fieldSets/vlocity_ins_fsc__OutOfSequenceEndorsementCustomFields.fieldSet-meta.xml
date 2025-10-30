@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>vlocity_ins_fsc__OutOfSequenceEndorsementCustomFields</fullName>
+    <description>Stores the custom field names of the Insurance Policy object that are used to copy details from canceled to new policy versions during an out-of-sequence endorsement.</description>
+    <label>OutOfSequenceEndorsementCustomFields</label>
+</FieldSet>

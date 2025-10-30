@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Register Encounter">
+        <lightning-record-edit-form object-api-name={objectApiName} onsuccess={handleSuccess}>
+            <lightning-input-field field-name={fields.patient}></lightning-input-field>
+
+            <!-- <lightning-button variant="base" label="+ Add Patient" onclick={handleAddPatient} class="slds-m-left_x-small"></lightning-button>
+            <lightning-card  lwc:if={togglePatientModal} title="Patient Details" variant="brand">
+                <lightning-record-edit-form  object-api-name={patientApiName}>
+                    <lightning-input-field field-name={patienFields.fname}></lightning-input-field>
+                    <lightning-input-field field-name={patienFields.lname}></lightning-input-field>
+                    <lightning-input-field field-name={patienFields.phone}></lightning-input-field>
+                    <lightning-button type="submit" label="Add Patient" class="slds-m-top_medium" variant="brand"></lightning-button>
+                </lightning-record-edit-form>
+            </lightning-card>        -->
+
+            <lightning-input-field field-name={fields.status}></lightning-input-field>
+            <lightning-input-field field-name={fields.doctor}></lightning-input-field>
+            <lightning-input-field field-name={fields.encounterDate}></lightning-input-field>
+            <lightning-input-field field-name={fields.summary}></lightning-input-field>
+            <lightning-input-field field-name={fields.encounterLocation}></lightning-input-field>
+            <!-- <lightning-button type="submit" label="Create" class="slds-m-top_medium" variant="brand"></lightning-button> -->
+             <div class="slds-border_top slds-p-top_small slds-m-top_medium slds-text-align_right">
+                <lightning-button 
+                    type="submit" 
+                    label="Create" 
+                    variant="brand">
+                </lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

@@ -1,0 +1,47 @@
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-medium">
+            <lightning-record-picker
+                label="Surgery"
+                placeholder="Search Surgery..."
+                object-api-name="Surgery__c"
+                value={surgeryId}
+                onchange={handleSurgeryChange}>
+            </lightning-record-picker>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" padding="around-medium">
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </template>
+
+            <template if:true={records}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={records}
+                    columns={columns}
+                    draft-values={draftValues}
+                    onsave={handleSave}
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column="true"
+                    inline-edit="true">
+                </lightning-datatable>
+            </template>
+
+            <template if:true={error}>
+                <p class="slds-text-color_error slds-p-around_medium">
+                    {error.body.message}
+                </p>
+            </template>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" padding="around-medium">
+            <lightning-button
+                label="Create Requisition"
+                variant="brand"
+                onclick={handleCreateRequisition}
+                class="slds-m-top_medium">
+            </lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

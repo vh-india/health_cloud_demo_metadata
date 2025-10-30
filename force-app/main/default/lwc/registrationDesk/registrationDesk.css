@@ -1,0 +1,11 @@
+.appt-card {
+    border: 1px solid #d8dde6;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 150px;
+    transition: all 0.2s;
+}
+.appt-card:hover {
+    border-color: #1b96ff;
+    box-shadow: 0 0 6px #1b96ff;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Encounter_Type__c</fullName>
+    <description>Type of encounter</description>
+    <label>Encounter Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Outpatient</fullName>
+                <default>false</default>
+                <label>Outpatient</label>
+            </value>
+            <value>
+                <fullName>Inpatient</fullName>
+                <default>false</default>
+                <label>Inpatient</label>
+            </value>
+            <value>
+                <fullName>Surgery</fullName>
+                <default>false</default>
+                <label>Surgery</label>
+            </value>
+            <value>
+                <fullName>House Visit</fullName>
+                <default>false</default>
+                <label>House Visit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HLS_UM_Intake_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>UM Intake</label>
+    <queue>HLS_UM_Intake</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

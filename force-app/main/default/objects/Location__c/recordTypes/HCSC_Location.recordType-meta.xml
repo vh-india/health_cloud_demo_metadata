@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HCSC_Location</fullName>
+    <active>true</active>
+    <label>HCSC Individual Location</label>
+    <picklistValues>
+        <picklist>Languages__c</picklist>
+        <values>
+            <fullName>1%2E Chinese%2C Mandarin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%2E German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%2E Chinese%2C Wu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%2E Javanese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13%2E Korean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14%2E French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2E Turkish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16%2E Vietnamese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17%2E Telugu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18%2E Chinese%2C Yue%28Cantonese%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19%2E Marathi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E Chinese%2C Southern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20%2E Tamil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21%2E Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22%2E Urdu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23%2E Chinese%2C Min Nan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24%2E Chinese%2C Jinyu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25%2E Gujarati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>26%2E Polish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>27%2E Ukrainian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>28%2E Persian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>29%2E Chinese%2C Xiang</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30%2E Malayalam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>31%2E Chinese%2C Hakka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>32%2E Kannada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>33%2E Oriya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>34%2E Panjabi%2C Western</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35%2E Panjabi%2C Eastern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35%2E Sunda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36%2E Romanian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>37%2E Bhojpuri</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>38%2E Azerbaijani%2C South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2E Arabic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40%2E Maithili</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>41%2E Hausa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>43%2E Burmese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>44%2E Serbo-Croatian4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45%2E Chinese%2C Gan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>46%2E Awadhi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>47%2E Thai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>48%2E Dutch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>49%2E Yoruba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%2E Bengali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50%2E Sindhi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%2E Hindi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2E Russian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%2E Portuguese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%2E Japanese</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Location_Status__c</picklist>
+        <values>
+            <fullName>Invalid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valid</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

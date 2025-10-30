@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_All_Open_Leads</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.COMPANY</field>
+        <operation>equals</operation>
+        <value>Trinity Hope Hospital</value>
+    </filters>
+    <label>Trinity Hospital Leads</label>
+</ListView>

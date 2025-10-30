@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admission</fullName>
+    <active>true</active>
+    <label>Admission</label>
+    <picklistValues>
+        <picklist>AmbulanceTransportReason</picklist>
+        <values>
+            <fullName>Patient Transferred to Rehabilitation Facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Transferred to Residential Facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient was transported for the benefit of a preferred physician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient was transported for the care of a specialist or for availability of specialized equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient was transported for the nearness of family members</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient was transported to nearest facility for care of symptoms%2C complaints%2C or both</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AmbulanceTransportType</picklist>
+        <values>
+            <fullName>Initial Trip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return Trip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Round Trip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer Trip</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ApprovedLevelOfCare</picklist>
+        <values>
+            <fullName>Hospital - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Room - Semi-private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Room and Board - Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Ward</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Specialized Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ClinicalDetermination</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Director Review Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reduced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stopped</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspended</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CodeType</picklist>
+        <values>
+            <fullName>CPT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HCPCS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CurrentLevelOfCare</picklist>
+        <values>
+            <fullName>Hospital - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Room - Semi-private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Room and Board - Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Ward</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Specialized Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DeniedLevelOfCare</picklist>
+        <values>
+            <fullName>Hospital - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Room - Semi-private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Room and Board - Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Ward</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Specialized Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ModifiedCodeType</picklist>
+        <values>
+            <fullName>CPT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HCPCS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ModifiedLevelOfCare</picklist>
+        <values>
+            <fullName>Hospital - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Room - Semi-private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Room and Board - Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Ward</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Specialized Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Routine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urgent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QuantityType</picklist>
+        <values>
+            <fullName>Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Units</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visits</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RequestType</picklist>
+        <values>
+            <fullName>Filler Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instance Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Option</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Original Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reflex Order</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RequestedLevelOfCare</picklist>
+        <values>
+            <fullName>Hospital - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Room - Semi-private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Room and Board - Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatric Ward</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Specialized Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certified - Partial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certified in Total</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Payer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Modified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Action Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Certified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Term Expired</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>StatusReason</picklist>
+        <values>
+            <fullName>Additional Patient Condition Information Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Authorization Number Not Found</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Authorization%2FAccess Restrictions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Authorized Quantity Exceeded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certification Information Does Not Match Patient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Date of Birth Follows Date%28s%29 of Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Date of Death Precedes Date%28s%29 of Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Date of Service Not Within Allowable Inquiry Period</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Date of Service in Future</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate Patient ID Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate Subscriber%2FInsured ID Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Experimental Service or Procedure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inappropriate Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inappropriate Product%2FService ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inappropriate Product%2FService ID Qualifier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inappropriate Provider Role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inconsistent with Patient%27s Age</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inconsistent with Patient%27s Gender</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Input Errors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inquired Benefit Inconsistent with Provider Type</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid Authorization Number Format</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid Participant Identification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid or Missing Provider Address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Accident Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Admission Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Date%28s%29 of Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Date-of-Birth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Diagnosis Code%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Discharge Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Expected Date of Birth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Last Menstrual Period Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Onset of Current Condition or Illness Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Patient Gender Code</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Patient ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Patient Name</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Procedure Code%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Provider Identification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Provider Name</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Provider Phone Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Provider Specialty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Provider State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Referring Provider Identification Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Subscriber%2FInsured Gender Code</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Subscriber%2FInsured ID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invalid%2FMissing Subscriber%2FInsured Name</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response received - Transaction Terminated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Birth Date Does Not Match That for the Patient on the Database</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Not Eligible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Not Found</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Ineligible for Inquiries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Not on File</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider is Not Primary Care Physician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Required application data missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requires Medical Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requires Primary Care Physician Authorization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Dates Not Within Provider Plan Enrollment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscriber Found%2C Patient Not Found</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscriber%2FInsured Not Found</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subscriber%2FInsured Not in Group%2FPlan Identified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Respond at Current Time</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

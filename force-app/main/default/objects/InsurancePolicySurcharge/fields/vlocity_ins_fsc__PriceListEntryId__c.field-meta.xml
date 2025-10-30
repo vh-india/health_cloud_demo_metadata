@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>vlocity_ins_fsc__PriceListEntryId__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Product tax and fee used to calculate the amount.</description>
+    <label>Tax/Fee Id</label>
+    <referenceTo>vlocity_ins__PriceListEntry__c</referenceTo>
+    <relationshipLabel>Insurance Policy Surcharges</relationshipLabel>
+    <relationshipName>InsurancePolicySurcharges</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

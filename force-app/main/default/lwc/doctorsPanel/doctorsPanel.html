@@ -1,0 +1,91 @@
+<template>
+    <lightning-layout lwc:if={printMode} multiple-rows>
+        <lightning-layout-item size="10" class="slds-p-right_medium slds-m-bottom_medium">
+            <p class="slds-text-heading_medium"><b>Trinity Hope Hospital</b></p>
+            <p class="slds-text-heading_small">Jawahar Lal Nehru Marg, Ashok Nagar, Jaipur, Rajasthan 302001</p>
+            <br>
+            <p class="slds-text-heading_small">Prescribed By:</p>
+            <p class="slds-text-heading_small">{userName}</p>
+            <p class="slds-text-heading_small">MBBS</p>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="2">
+            <div class="slds-float_right slds-no-print">
+                <lightning-input type="toggle" label="Print Rx" onchange={handlePrintToggleChange} checked={printMode} disabled={isEncounterSelected}></lightning-input>
+            </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12">
+            <div class="slds-border_top slds-m-vertical_medium"></div>
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-medium" size="6">
+            <c-current-rx-viewer lwc:ref="currentRxViewer" print-mode={printMode} selected-encounter-id={selectedEncounterId}></c-current-rx-viewer>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout lwc:else multiple-rows>
+        <lightning-layout-item padding="around-small" size="6">
+            <h1 class="slds-text-heading_medium">Doctors Panel | Hi {userName}👋</h1>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="6">
+            <div class="slds-float_right">
+                <lightning-input type="toggle" label="Print Rx" onchange={handlePrintToggleChange} value={printMode} disabled={isEncounterSelected}></lightning-input>
+            </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-medium" size="4">
+            <c-patient-historic-encounter-viewer selected-encounter-id={selectedEncounterId}></c-patient-historic-encounter-viewer>
+        </lightning-layout-item>
+    
+        <lightning-layout-item padding="around-medium" size="4">
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="12">
+                    <div class="slds-p-bottom_medium">
+                        <lightning-record-picker
+                            label="Select Encounter"
+                            placeholder="Search Encounter..."
+                            object-api-name="ClinicalEncounter"
+                            value={selectedEncounterId}
+                            onchange={handleEncounterChange}
+                            matching-info={matchingInfo}
+                            display-info={displayInfo}
+                        >
+                        </lightning-record-picker>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" lwc:if={selectedEncounterId}>
+                     <lightning-record-edit-form record-id={selectedEncounterId} object-api-name="ClinicalEncounter" onsuccess={handleSuccess} onsubmit={handleSubmit} onerror={handleError}>
+                        <div class="slds-m-top_medium slds-text-align_right">
+                            <lightning-button
+                                variant="brand"
+                                type="submit"
+                                name="submit"
+                                label="✓ Mark as done"
+                            >
+                            </lightning-button>
+                        </div>
+                        <lightning-accordion allow-multiple-sections-open>
+                            <lightning-accordion-section name="A" label="Notes">
+                                <lightning-input-field field-name="Summary__c" disabled> </lightning-input-field>
+                                <lightning-input-field field-name="Doctor_Feedback__c"> </lightning-input-field>
+                                <lightning-input-field field-name="Status" class="slds-hide" value="Completed"> </lightning-input-field>
+                            </lightning-accordion-section>
+                            <lightning-accordion-section name="B" label="Admission">
+                                <lightning-input-field field-name="Admission_Recommended__c" onchange={handleAdmitCheckboxChange}> </lightning-input-field>
+                                <lightning-input-field field-name="Admission_Reason__c" class={admissionReasonClass}> </lightning-input-field>
+                            </lightning-accordion-section>
+                        </lightning-accordion>
+                    </lightning-record-edit-form>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <c-current-rx-viewer lwc:ref="currentRxViewer" print-mode={printMode} selected-encounter-id={selectedEncounterId}></c-current-rx-viewer>
+                </lightning-layout-item>
+            </lightning-layout>
+            
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-medium" size="4">
+            <c-prescription-creator onprescriptionadd={handlePrescriptionAdd} selected-encounter-id={selectedEncounterId} doctor-id={userId}></c-prescription-creator>
+        </lightning-layout-item>
+
+    </lightning-layout>
+</template>

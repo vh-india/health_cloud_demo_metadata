@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <name>region1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>encounterListViewer</componentName>
+                <identifier>c_encounterListViewer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>region2</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>registrationDesk</componentName>
+                <identifier>c_registrationDesk</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>region3</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Registration Desk</masterLabel>
+    <template>
+        <name>flexipage:appHomeTemplateHeaderTwoColumnsLeftSidebar</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

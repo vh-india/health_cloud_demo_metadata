@@ -1,0 +1,56 @@
+<template>
+    <div class="container">
+        <!-- Left Side -->
+        <div class="left">
+            <img src={hospitalImage} alt="Trinity Hope Hospital" />
+            <div class="left-text">
+                <h2>Why Choose Trinity Hope Hospital?</h2>
+                <p>Compassionate care with advanced medical technology.</p>
+                <p>Expert doctors and dedicated nursing staff.</p>
+                <p>Comprehensive treatment in a safe and friendly environment.</p>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="right">
+            <div class="form-wrapper">
+                <h2>Submit a Case – Trinity Hope Hospital</h2>
+
+                <lightning-input label="Contact Name *" name="name" value={name} required onchange={handleChange}></lightning-input>
+                <lightning-input label="Email *" type="email" name="email" value={email} required onchange={handleChange}></lightning-input>
+                <lightning-input label="Phone *" type="tel" name="phone" value={phone} required onchange={handleChange}></lightning-input>
+                <lightning-input label="Subject *" name="subject" value={subject} required onchange={handleChange}></lightning-input>
+                <lightning-textarea label="Description *" name="description" value={description} required onchange={handleChange}></lightning-textarea>
+
+                <lightning-combobox
+                    label="Priority"
+                    name="priority"
+                    value={priority}
+                    placeholder="--Select Priority--"
+                    options={priorityOptions}
+                    onchange={handleChange}>
+                </lightning-combobox>
+
+                <lightning-combobox
+                    label="Case Type"
+                    name="caseType"
+                    value={caseType}
+                    placeholder="--Select Case Type--"
+                    options={caseTypeOptions}
+                    onchange={handleChange}>
+                </lightning-combobox>
+
+                <!-- File Upload -->
+                <!-- <lightning-file-upload
+                    label="Attach Files"
+                    name="fileUploader"
+                    accept=".pdf,.png,.jpg,.jpeg"
+                    record-id={newCaseId}
+                    onuploadfinished={handleUploadFinished}>
+                </lightning-file-upload> -->
+
+                <lightning-button variant="brand" label="Submit Case" class="slds-m-top_medium" onclick={handleSubmit}></lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

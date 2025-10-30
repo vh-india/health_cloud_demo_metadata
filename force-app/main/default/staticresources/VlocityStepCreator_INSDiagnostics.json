@@ -1,0 +1,38 @@
+{
+    "type": "VlocityStepCreator",
+    "fileName": "VlocityStepCreator_INSDiagnostics",
+    "plan": {
+        "Name": "INS Diagnostics",
+        "UniqueId": "INS Diagnostics"
+    },
+    "steps": [
+        {
+            "PreCheckMethod": "VlocityDiagnosticWizardINSMethods.checkSObject",
+            "ExecutionMethod": "VlocityDiagnosticWizardINSMethods.setSObject",
+            "IsActive": true,
+            "ParentStepUniqueId": "",
+            "PostCheckMethod": "VlocityDiagnosticWizardINSMethods.checkSObject",
+            "CustomInputLabel": "",
+            "PrecursorStepUniqueId": "",
+            "UniqueId": "AllTriggersCustomSetting_INS_ALL",
+            "Instruction": "",
+            "Name": "Enable the AllTriggers Custom Setting",
+            "StepFrequency": "Diagnostic",
+            "Priority": "None",
+            "ArgumentList": "",
+            "CheckResultUrl": "",
+            "Type": "Auto",
+            "CustomInputValue": "",
+            "Tags": "",
+            "ExternalId": "Enable the AllTriggers Custom Setting",
+            "Options": {
+                "SObject": {
+                    "vlocity_ins__IsTriggerOn__c": true,
+                    "Name": "AllTriggers",
+                    "SObjectType": "vlocity_ins__TriggerSetup__c"
+                }
+            },
+            "StepCommand": "https://help-center.vlocity.com/Content/INS/Install_Upgrade/Enabling_All_Triggers_Custom_Setting.htm"
+        }
+    ]
+}

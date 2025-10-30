@@ -1,0 +1,9 @@
+{
+    "type": "VlocityStepCreator",
+    "fileName": "VlocityStepCreator_INSPostUpgrade",
+    "plan": {
+        "Name": "INS Post-Upgrade",
+        "UniqueId": "INS Post-Upgrade"
+    },
+    "steps": []
+}

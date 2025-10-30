@@ -1,0 +1,36 @@
+<template>
+    <template lwc:if={isEncounterSelected}>
+        <div class="slds-is-relative">
+            <template lwc:if={isLoading}>
+                <lightning-spinner
+                    alternative-text="Loading"
+                    size="medium"
+                    class="datatable-spinner"
+                ></lightning-spinner>
+            </template>
+            <template lwc:if={_printMode}>
+                <div class="slds-p-around_medium">
+                    <template for:each={prescriptions} for:item="presc">
+                        <p key={presc.Id} class="slds-m-bottom_x-small slds-text-body_regular">
+                            {presc.Medication_Name__c} - {presc.Dosage__c}, {presc.Frequency__c} for {presc.Duration__c} days
+                        </p>
+                    </template>
+                </div>
+            </template>
+            <template lwc:else>
+                <lightning-datatable
+                    key-field="Id"
+                    data={prescriptions}
+                    columns={columnsToDisplay}
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column
+                >
+                </lightning-datatable>
+
+                <div lwc:if={prescriptionNotAvailable} class="slds-p-top_medium slds-align_absolute-center">
+                    No prescriptions to show
+                </div>      
+            </template>
+        </div>
+    </template>
+</template>

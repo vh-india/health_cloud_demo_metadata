@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HealthCloudGA__Healthcare</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>%3F%3FEscalated</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>%E2%9D%8E  Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>%E2%AD%90%EF%B8%8F  New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Approved</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Concurrent Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Intake Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>MD Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Nurse Review</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

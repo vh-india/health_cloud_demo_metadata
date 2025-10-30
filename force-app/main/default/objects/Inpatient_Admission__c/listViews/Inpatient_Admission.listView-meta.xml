@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inpatient_Admission</fullName>
+    <columns>NAME</columns>
+    <columns>Bed_Inventory__c</columns>
+    <columns>Patient__c</columns>
+    <columns>Assigned_Doctor__c</columns>
+    <columns>Admission_Date__c</columns>
+    <columns>Discharge_Date__c</columns>
+    <columns>Total_Charges__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>Inpatient Admission</label>
+</ListView>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Email_to_Customer</name>
+        <label>Send Email to Customer</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Send_Email_To_Doctor</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>getrelatedAccountRecords.PersonEmail</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Your Appointment Confirmation with Trinity Hope Hospital</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>sendToCustmerMailBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>1.0.1</versionString>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_To_Doctor</name>
+        <label>Send Email To Doctor</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.FSLDemoTools_Service_Resource__r.RelatedRecord.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Upcoming Appointment Assigned – Review Now</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>sendtoDoctor</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>1.0.1</versionString>
+    </actionCalls>
+    <actionCalls>
+        <name>send_Email_to_Pateint_when_appointment_is_complated</name>
+        <label>send Email to Pateint when appointment is complated</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>composeEmailContent</name>
+            <value>
+                <stringValue>True</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Your Appointment on {!$Record.SchedStartTime} Has Been Completed</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>sendtocustomeraftercomplated</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <offset>0</offset>
+        <versionString>1.0.1</versionString>
+    </actionCalls>
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Mail_trigger_according_to_condiion</name>
+        <label>Mail trigger according to condiion</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_Appointment_Scheduled</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Scheduled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.FSLDemoTools_Service_Resource__r.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Owner_Record</targetReference>
+            </connector>
+            <label>If Appointment Scheduled</label>
+        </rules>
+        <rules>
+            <name>If_appointment_Complated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>send_Email_to_Pateint_when_appointment_is_complated</targetReference>
+            </connector>
+            <label>If appointment Complated</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Send Email - Service Apointment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Send Email - Service Apointment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>getrelatedAccountRecords</name>
+        <label>getrelatedAccountRecords</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>getServiceResource</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>getServiceResource</name>
+        <label>getServiceResource</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Mail_trigger_according_to_condiion</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ServiceResource</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Owner_Record</name>
+        <label>Update Owner Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Email_to_Customer</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.FSLDemoTools_Service_Resource__r.RelatedRecordId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>getrelatedAccountRecords</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2 ) AND 3</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Scheduled</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>FSLDemoTools_Service_Resource__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>ServiceAppointment</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>sendToCustmerMailBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;https://vh-hls.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=068Ka00000PnnGB&amp;operationContext=DELIVERY&amp;contentId=05TKa00001eG3cH&amp;page=0&amp;d=/a/Ka000001M2S7/9xT1lB49XemuVLhpXRgv37v9.ZWX_2vjtK1pWKOXp4A&amp;oid=00DKa000003md51&amp;dpt=null&amp;viewId=&quot; alt=&quot;Clinic Logo&quot; style=&quot;width: 200px;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Dear {!getrelatedAccountRecords.FirstName},&lt;/p&gt;
+
+&lt;p&gt;Thank you for choosing our healthcare services. Your &lt;strong&gt;appointment&lt;/strong&gt; has been successfully scheduled with the details below:&lt;/p&gt;
+
+&lt;table style=&quot;width: 100%; border: none;&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;strong&gt;📅 Appointment Date &amp; Time:&lt;/strong&gt;&lt;/td&gt;
+    &lt;td&gt;{!$Record.SchedStartTime}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;strong&gt;👨 Assigned Doctor / Care Provider:&lt;/strong&gt;&lt;/td&gt;
+    &lt;td&gt;{!$Record.FSLDemoTools_Service_Resource__r.Name}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;strong&gt;🏠 Patient Address:&lt;/strong&gt;&lt;/td&gt;
+    &lt;td&gt;{!$Record.Description}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;If you have any questions or need to reschedule, please contact us at {!$Record.Phone} or reply to this email.&lt;/p&gt;
+
+&lt;p style=&quot;margin-top: 30px;&quot;&gt;
+Warm regards,&lt;br&gt;
+&lt;strong&gt;Your Care Team&lt;/strong&gt;
+&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>sendtocustomeraftercomplated</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;https://vh-hls.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=068Ka00000PnnGB&amp;operationContext=DELIVERY&amp;contentId=05TKa00001eG3cH&amp;page=0&amp;d=/a/Ka000001M2S7/9xT1lB49XemuVLhpXRgv37v9.ZWX_2vjtK1pWKOXp4A&amp;oid=00DKa000003md51&amp;dpt=null&amp;viewId=&quot; alt=&quot;Clinic Logo&quot; style=&quot;width: 200px;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Dear {!getrelatedAccountRecords.FirstName},&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;We hope you are doing well. Your &lt;strong&gt;appointment&lt;/strong&gt; has been successfully &lt;strong&gt;completed&lt;/strong&gt; with the details below:&lt;/p&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;table style=&quot;width: 100%; border: none; white-space: pre;&quot;&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;📅 Appointment Date &amp;amp; Time:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;{!$Record.SchedStartTime}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;👨 Attending Doctor / Care Provider:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;{!$Record.FSLDemoTools_Service_Resource__r.Name}&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;🏠 Patient Address:&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;{!$Record.Description}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;p&gt;Thank you for trusting us with your care. If you have any follow-up questions, require additional services, or need another appointment, please don’t hesitate to contact us at {!$Record.Phone} or reply to this email.&lt;/p&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;p&gt;Wishing you good health,&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your Care Team&lt;/strong&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>sendtoDoctor</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;div style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;https://vh-hls.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&amp;versionId=068Ka00000PnnGB&amp;operationContext=DELIVERY&amp;contentId=05TKa00001eG3cH&amp;page=0&amp;d=/a/Ka000001M2S7/9xT1lB49XemuVLhpXRgv37v9.ZWX_2vjtK1pWKOXp4A&amp;oid=00DKa000003md51&amp;dpt=null&amp;viewId=&quot; alt=&quot;Clinic Logo&quot; style=&quot;width: 200px;&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Dear {!$Record.FSLDemoTools_Service_Resource__r.Name},&lt;/p&gt;
+
+&lt;p&gt;A new &lt;strong&gt;appointment&lt;/strong&gt; has been scheduled. Please find the details below:&lt;/p&gt;
+
+&lt;table style=&quot;width: 100%; border: none;&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;strong&gt;📅 Appointment Date &amp; Time:&lt;/strong&gt;&lt;/td&gt;
+    &lt;td&gt;{!$Record.SchedStartTime}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;strong&gt;👤 Patient Name:&lt;/strong&gt;&lt;/td&gt;
+    &lt;td&gt;{!getrelatedAccountRecords.Name}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;strong&gt;🏠 Patient Address:&lt;/strong&gt;&lt;/td&gt;
+    &lt;td&gt;{!$Record.Description}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;
+  👉 &lt;a href=&quot;https://vh-hls.lightning.force.com/lightning/r/Account/{!$Record.Id}/view&quot; target=&quot;_blank&quot; style=&quot;background-color:#1976d2; color:#ffffff; padding:10px 20px; text-decoration:none; border-radius:6px;&quot;&gt;View Appointment in Salesforce&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;margin-top: 30px;&quot;&gt;
+Warm regards,&lt;br&gt;
+&lt;strong&gt;Your Care Team&lt;/strong&gt;
+&lt;/p&gt;</text>
+    </textTemplates>
+</Flow>

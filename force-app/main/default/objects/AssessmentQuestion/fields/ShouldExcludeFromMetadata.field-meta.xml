@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ShouldExcludeFromMetadata</fullName>
+    <inlineHelpText>Indicates whether the assessment question record should be excluded from metadata (true) or not (false).</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

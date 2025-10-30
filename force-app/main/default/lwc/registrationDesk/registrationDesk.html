@@ -1,0 +1,36 @@
+<template>
+    <template lwc:if={isSelected}>
+        <template lwc:if={isNewPatient}>
+            <lightning-record-form object-api-name="Account" record-type-id="012Ka000001FvBdIAK" fields={accountFields} onsuccess={handleNewAccountSuccess} oncancel={handleCancel}>
+            </lightning-record-form>
+        </template>
+        <template lwc:else>
+            <lightning-flow
+                flow-api-name="Add_Encounter_Flow"
+                flow-input-variables={inputEncounterFlowVariables}
+                onstatuschange={handleStatusChange}>
+            </lightning-flow>
+        </template>
+    </template>
+    <template lwc:else>
+        <div class="slds-align_absolute-center slds-m-vertical_medium">
+            <h2 class="slds-text-heading_medium">Select appointment type</h2>
+        </div>
+
+        <div class="slds-grid slds-grid_align-center slds-m-top_medium">
+            <!-- New Patient -->
+            <div class="appt-card slds-p-around_medium slds-m-around_small slds-text-align_center"
+                onclick={handleNewPatient}>
+                <lightning-icon icon-name="utility:groups" size="large"></lightning-icon>
+                <p class="slds-m-top_small">New Patient</p>
+            </div>
+
+            <!-- Existing Patient -->
+            <div class="appt-card slds-p-around_medium slds-m-around_small slds-text-align_center"
+                onclick={handleExistingPatient}>
+                <lightning-icon icon-name="utility:event" size="large"></lightning-icon>
+                <p class="slds-m-top_small">Existing Patient</p>
+            </div>
+        </div>
+    </template>
+</template>

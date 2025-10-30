@@ -1,0 +1,28 @@
+<template>
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-8">
+            <div class="slds-p-left_small slds-p-top_large">
+                <lightning-icon icon-name="utility:video" alternative-text="Video" title="" size="small"></lightning-icon>
+            </div>
+        </div>
+        <div class="slds-col slds-size_7-of-8">
+            <div class="slds-text-heading_small slds-m-left_small slds-p-top_medium slds-m-top_xxx-small">
+                {message}
+            </div>
+        </div>
+    </div>
+    <div class="slds-grid slds-m-top_small slds-p-bottom_large">
+        <div class="slds-col slds-size_1-of-8">
+            &nbsp;
+        </div>
+        <div class="slds-col slds-size_7-of-8">
+            <div class="slds-m-left_small">
+                1 guest waiting to join.
+            </div>
+        </div>
+    </div>
+    <div class="border"></div>
+    <div class="slds-m-top_small slds-m-right_small slds-clearfix">
+        <lightning-button variant="brand" label="Start Video Call" onclick={clearNotification} class="slds-float_right"></lightning-button>
+    </div>
+</template>

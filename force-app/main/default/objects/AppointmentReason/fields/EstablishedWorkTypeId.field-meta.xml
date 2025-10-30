@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EstablishedWorkTypeId</fullName>
+    <inlineHelpText>Specifies appointment parameters for an established patient (has been seen within the last 3 years) if different from default work type.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

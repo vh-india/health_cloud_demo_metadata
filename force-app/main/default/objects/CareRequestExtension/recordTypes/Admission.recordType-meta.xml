@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admission</fullName>
+    <active>true</active>
+    <label>Admission</label>
+    <picklistValues>
+        <picklist>AmbulanceTransportReason</picklist>
+        <values>
+            <fullName>Patient Transferred to Rehabilitation Facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient Transferred to Residential Facility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient was transported for the benefit of a preferred physician</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient was transported for the care of a specialist or for availability of specialized equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient was transported for the nearness of family members</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Patient was transported to nearest facility for care of symptoms%2C complaints%2C or both</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AmbulanceTransportType</picklist>
+        <values>
+            <fullName>Initial Trip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return Trip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Round Trip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer Trip</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CaseSubStatus</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More Information Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More Information Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peer to Peer Review Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Peer to Peer Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DocumentAttachmentStatus</picklist>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incomplete</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IndependentReviewDetermination</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overturned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upheld</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NursingHomeResidentialStatus</picklist>
+        <values>
+            <fullName>Newly Admitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newly Eligible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Longer Eligible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Still a Resident</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary Absence - Hospital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary Absence - Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transferred to Intermediate Care Facility</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PriorDischargeStatus</picklist>
+        <values>
+            <fullName>Discharged to court%2Flaw enforcement%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharged to home with home health%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharged to home%2Fself care%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharged to hospice care%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharged%2Ftransferred to LTACC%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharged%2Ftransferred to Psychiatric facility%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharged%2Ftransferred to SNF%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discharged%2Ftransferred to other acute care facility%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left against medical advice %28AMA%29%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ReferenceCaseType</picklist>
+        <values>
+            <fullName>Associated Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prior Case</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ReopenRequestOutcome</picklist>
+        <values>
+            <fullName>Overturned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upheld</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ReopenRequestType</picklist>
+        <values>
+            <fullName>Peer-to-Peer Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reconsideration</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RequestOutcome</picklist>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overturned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partially Upheld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Queued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upheld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voided</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RequestType</picklist>
+        <values>
+            <fullName>Admission Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Concurrent Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health Services Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inpatient - Behavioral Health Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inpatient - Physical Health Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outpatient - Behavioral Health Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outpatient - Physical Health Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialty Care Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ServiceLevel</picklist>
+        <values>
+            <fullName>Elective</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urgent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

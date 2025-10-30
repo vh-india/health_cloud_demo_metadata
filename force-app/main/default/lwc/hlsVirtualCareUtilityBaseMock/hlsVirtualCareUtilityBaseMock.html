@@ -1,0 +1,14 @@
+<template>
+   <c-hls-virtual-care-appointment-reminder
+        if:true={showNotification}
+        appointment={nextAppointmentToday}
+        onclearnotification={clearNotification}>
+   </c-hls-virtual-care-appointment-reminder>
+   <c-hls-virtual-care-appointments
+        if:true={showAppointments}
+        upcoming-appointments-by-day={upcomingAppointmentsByDay}
+        past-appointments-by-day={pastAppointmentsByDay}
+        onrefreshappointments={refreshAppointments}
+        trigger-refresh-appointments={triggerRefreshAppointments}>
+    </c-hls-virtual-care-appointments>
+</template>

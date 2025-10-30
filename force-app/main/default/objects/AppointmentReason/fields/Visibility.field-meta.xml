@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visibility</fullName>
+    <inlineHelpText>Specifies whether the information can be provided by the patient or must be provided by the call center agent.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Medical Devices</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-MedicalDevicesAppHome</tabs>
+    <tabs>standard-InventoryCycleCount</tabs>
+    <tabs>standard-MedicalSales</tabs>
+    <tabs>standard-ProductsStatus</tabs>
+    <tabs>standard-RequestsIn</tabs>
+    <tabs>standard-RequestsOut</tabs>
+    <tabs>standard-ProductExpiration</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Visit</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>standard-ProductItem</tabs>
+    <tabs>standard-WorkType</tabs>
+    <tabs>standard-Location</tabs>
+    <tabs>standard-ProductRequired</tabs>
+    <tabs>standard-ProductTransfer</tabs>
+    <tabs>Inpatient_Admission__c</tabs>
+    <tabs>Prescription__c</tabs>
+    <tabs>Surgery__c</tabs>
+    <tabs>Pharmacy_Requisition__c</tabs>
+    <tabs>Home_Visit__c</tabs>
+    <tabs>Bed_Inventory__c</tabs>
+    <tabs>Ward__c</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admission</fullName>
+    <active>true</active>
+    <label>Admission</label>
+    <picklistValues>
+        <picklist>AdmissionSource</picklist>
+        <values>
+            <fullName>Ambulatory Surgical Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clinic Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Court or Law Enforcement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practitioner Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer from Hospital %28different facility%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer from Skilled Nursing Facility</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AdmissionType</picklist>
+        <values>
+            <fullName>Elective</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newborn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urgent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AppealRequestReasonType</picklist>
+        <values>
+            <fullName>Notification Delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected - No Coverage Benefit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected - Service Not Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Claim Unpaid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Request Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialist Referral Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ApprovedLevelOfCare</picklist>
+        <values>
+            <fullName>Hospital - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Observation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Specialized Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ClinicalCaseType</picklist>
+        <values>
+            <fullName>Acute Stress Disorder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Asthma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adult Diabetes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CNS Disorders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemical Dependency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congestive Heart Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coronary Artery Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HIV%2FAIDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hepatitis C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk Elderly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk Fall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk Infant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Risk Pregnancy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hip Fracture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Major Depressive Disorder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Morbid Obesity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Trauma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neuromuscular Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedic Pain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Panic Disorder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pediatric Asthma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smoker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spinal Cord Injury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transplant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traumatic Brain Injury</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Low Birth Weight</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CriteriaMet</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CurrentLevelOfCare</picklist>
+        <values>
+            <fullName>Hospital - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Observation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Specialized Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DecisionReason</picklist>
+        <values>
+            <fullName>Date of Service Not Within Allowable Period</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level of Care Not Appropriate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member Not Found</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Formulary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Found to be Medically Necessary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Off-Label or Unapproved Use</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quantity Limit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Required Data Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step Therapy Not Attempted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DeniedLevelOfCare</picklist>
+        <values>
+            <fullName>Hospital - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Observation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Specialized Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FacilityRoomBedType</picklist>
+        <values>
+            <fullName>Acute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ICU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intermediate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemetry</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FinalLevelOfCare</picklist>
+        <values>
+            <fullName>Hospital - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Observation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Specialized Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GrievanceType</picklist>
+        <values>
+            <fullName>Benefit Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Care Quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enrollment%2FDisenrollment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MemberGender</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MemberPrognosis</picklist>
+        <values>
+            <fullName>Excellent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Good</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guarded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Less than 6 Months to Live</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Very Good</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ModifiedLevelOfCare</picklist>
+        <values>
+            <fullName>Hospital - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Observation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Specialized Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ParProvider</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PlaceOfService</picklist>
+        <values>
+            <fullName>Ambulatory Surgical Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Observation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provider Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skilled Nursing Facility</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QuantityType</picklist>
+        <values>
+            <fullName>Days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Units</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visits</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ReopenReason</picklist>
+        <values>
+            <fullName>Administrative Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Original Decision Overturned</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RequestedLevelOfCare</picklist>
+        <values>
+            <fullName>Hospital - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Intensive Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Observation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospital - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNF - Specialized Care</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RequesterType</picklist>
+        <values>
+            <fullName>Appointed Representative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practitioner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RequestingPractitionerLicense</picklist>
+        <values>
+            <fullName>D%2EO%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2ED%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2EP%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P%2EA%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RequestingPractitionerSpecialty</picklist>
+        <values>
+            <fullName>Addiction Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advanced Heart Failure and Transplant Cardiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy%2F Immunology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anesthesiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardiac Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardiovascular Disease %28Cardiology%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clinical Psychology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colorectal Surgery %28Proctology%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Critical Care %28Intensivists%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dermatology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diagnostic Radiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Endocrinology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Practice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gastroenterology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Practice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geriatric Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geriatric Psychiatry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gynecological Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hand Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heamtology-Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hematology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospice and Palliative Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitalist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infectious Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interventional Cardiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interventional Pain Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interventional Radiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maxillofacial Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Toxicology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nephrology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neurology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neuropsychiatry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neurosurgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuclear Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obstetrics and Gynecology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opthamology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedic Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Osteopathic Manipulative Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otolaryngology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pain Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pathology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pediatric Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peripheral Vascular Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Medicine and Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plastic and Reconstructive Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Podiatry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preventive Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pulmonary Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radiation Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rheumatology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sleep Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surgical Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thoracic Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undefined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vascular Surgery</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ServicingPractitionerLicense</picklist>
+        <values>
+            <fullName>D%2EO%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2ED%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2EP%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>P%2EA%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ServicingPractitionerSpecialty</picklist>
+        <values>
+            <fullName>Addiction Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advanced Heart Failure and Transplant Cardiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allergy%2F Immunology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anesthesiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardiac Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cardiovascular Disease %28Cardiology%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clinical Psychology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colorectal Surgery %28Proctology%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Critical Care %28Intensivists%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dermatology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diagnostic Radiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Endocrinology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family Practice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gastroenterology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Practice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geriatric Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Geriatric Psychiatry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gynecological Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hand Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heamtology-Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hematology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospice and Palliative Care</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitalist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infectious Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interventional Cardiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interventional Pain Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interventional Radiology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maxillofacial Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Toxicology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nephrology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neurology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neuropsychiatry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neurosurgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuclear Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obstetrics and Gynecology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opthamology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orthopedic Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Osteopathic Manipulative Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otolaryngology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pain Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pathology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pediatric Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peripheral Vascular Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Medicine and Rehabilitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plastic and Reconstructive Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Podiatry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preventive Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychiatry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pulmonary Disease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radiation Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rheumatology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sleep Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sports Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surgical Oncology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thoracic Surgery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undefined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Urology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vascular Surgery</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

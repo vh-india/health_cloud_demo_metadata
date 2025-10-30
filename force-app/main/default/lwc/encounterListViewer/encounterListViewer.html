@@ -1,0 +1,59 @@
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item padding="around-small" size="12">
+            <div class="slds-text-heading_medium">Encounter List</div>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="6">
+            <lightning-input type="search" 
+                placeholder="Enter search term..."
+                value={searchTerm}
+                onchange={handleSearchChange}>
+            </lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="6">
+            <lightning-button-group class="slds-p-top_medium">
+                <lightning-button lwc:ref="scheduledBtn" label="Scheduled" variant="brand" onclick={toggleUrgentEncounter}></lightning-button>
+                <lightning-button lwc:ref="emergencyBtn" label="Emergency" variant="brand-outline" onclick={toggleUrgentEncounter} icon-name="utility:warning"></lightning-button>
+            </lightning-button-group>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12">
+            <!-- Tabset only for selection -->
+            <lightning-tabset active-tab-value={activeTabValue}>
+                <lightning-tab lwc:if={isScheduledCategory} label="Planned" value="Planned" onactive={handleActiveTab}></lightning-tab>
+                <lightning-tab label="In Progress" value="In Progress" onactive={handleActiveTab}></lightning-tab>
+                <lightning-tab label="Completed" value="Completed" onactive={handleActiveTab}></lightning-tab>
+            </lightning-tabset>
+        </lightning-layout-item>
+        <!-- Common content below tabs -->
+        <lightning-layout-item size="12">
+            <template lwc:if={filteredEncounters.length}>
+                <div class="slds-scrollable_y slds-box slds-p-around_small" style="max-height: 45vh;">
+                    <template for:each={filteredEncounters} for:item="encounter">
+                        <lightning-card key={encounter.Id} title={encounter.Name} class="slds-p-horizontal_small">
+                            <lightning-button label="View" slot="actions" onclick={handleViewEncounter} data-link={encounter.encounterLink} ></lightning-button>
+                            <div class="slds-p-horizontal_small">
+                                <p>
+                                    <strong>Start Time:</strong> {encounter.formattedTime}
+                                </p>
+                                <p>
+                                    <strong>Patient:</strong>
+                                    <a href={encounter.patientLink} target="_blank"> {encounter.Patient.Name}</a>
+                                </p>
+                                <p>
+                                    <strong>Doctor:</strong>
+                                    <a href={encounter.doctorLink} target="_blank"> {encounter.Doctor__r.Name}</a>
+                                </p>
+                            </div>
+                        </lightning-card>
+                    </template>
+                </div>
+            </template>
+            <template lwc:else>
+                <p class="slds-text-color_error">No encounters found for "{activeTabValue}".</p>
+            </template>
+        </lightning-layout-item>
+    </lightning-layout>
+
+</template>

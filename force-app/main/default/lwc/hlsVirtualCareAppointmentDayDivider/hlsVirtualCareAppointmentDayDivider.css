@@ -1,0 +1,14 @@
+.relativePosition{
+    position: relative;
+}
+
+.dateTitle{
+    font-weight: bold;
+    display: inline-block;
+}
+
+.calendarIcon{
+    position: absolute;
+    left: 105%;
+    top: -0.15rem;
+}

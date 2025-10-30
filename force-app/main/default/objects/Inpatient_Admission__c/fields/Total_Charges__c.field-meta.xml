@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Charges__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    AND(
+        NOT(ISBLANK(Admission_Date__c)),
+        NOT(ISBLANK(Discharge_Date__c)),
+        NOT(ISBLANK(Bed_Inventory__r.Cost_Per_Day__c))
+    ),
+    ( (Discharge_Date__c - Admission_Date__c) + 1 ) * Bed_Inventory__r.Cost_Per_Day__c,
+    0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Charges</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

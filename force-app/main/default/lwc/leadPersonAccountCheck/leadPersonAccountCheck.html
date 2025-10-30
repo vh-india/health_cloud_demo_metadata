@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Person Account Link Status">
+        <template if:true={isConverted}>
+            <div class="slds-box slds-theme_default slds-m-around_x-small">
+                <p>This Lead has been converted and is linked with:</p>
+                <lightning-formatted-url value={accountUrl} label={account.Name} target="_blank">
+                </lightning-formatted-url>
+                <!-- <p>{account.PersonEmail}</p> -->
+            </div>
+        </template>
+
+        <template if:true={isLinked}>
+            <div class="slds-box slds-theme_default slds-m-around_x-small">
+                <p>This Lead email matches an existing Person Account:</p>
+                <lightning-formatted-url value={accountUrl} label={account.Name} target="_blank">
+                </lightning-formatted-url>
+                <!-- <p>{account.PersonEmail}</p> -->
+            </div>
+        </template>
+
+        <template if:true={isNotLinked}>
+            <div class="slds-box slds-theme_default slds-m-around_x-small">
+                <p>This Lead is not yet linked with any Person Account. Please convert this Lead first.</p>
+            </div>
+        </template>
+
+        <template if:true={noEmail}>
+            <div class="slds-box slds-theme_default slds-m-around_x-small">
+                <p>No email found on this Lead. Cannot check link.</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>

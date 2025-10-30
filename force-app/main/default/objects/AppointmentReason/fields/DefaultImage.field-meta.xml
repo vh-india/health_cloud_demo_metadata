@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DefaultImage</fullName>
+    <inlineHelpText>Generic image for all visit reasons. Custom image overrides default image if present.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

@@ -1,4 +1,0 @@
-<apex:page controller="SDO_Analytics_ReportFakerController" action="{!vfController}">
-    <apex:slds /> 
-    Uh oh, if you're seeing this it means something probably went wrong
-</apex:page>
